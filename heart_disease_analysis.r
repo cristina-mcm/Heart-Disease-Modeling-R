@@ -180,7 +180,7 @@ for(i in seq(from=1, to=150, by=1)) {
     
     trees <- c(trees, i)
  
-    model_rf1 <- randomForest(target ~ age + sex + cp + trestbps + chol + restecg + exang + ca, data=train.data, ntree = i)
+    model_rf1 <- randomForest(target ~ age + sex + cp + trestbps + chol + restecg + exang + ca, data=train.data1, ntree = i)
     
     train.data.predict1 <- predict(model_rf1, train.data1, type = "class")
     conf.matrix1 <- table(train.data1$target, train.data.predict1)
@@ -199,7 +199,7 @@ legend('topright',legend = c('training set','testing set'), col = c("red","blue"
 
 set.seed(6522048)
 library(randomForest)
-model_rf2 <- randomForest(target ~ age + sex + cp + trestbps + chol + restecg + exang + ca, data=train.data, ntree = 20)
+model_rf2 <- randomForest(target ~ age + sex + cp + trestbps + chol + restecg + exang + ca, data=train.data1, ntree = 20)
 
 # Confusion matrix
 print("======================================================================================================================")
@@ -260,7 +260,7 @@ trees = c()
 
 for(i in seq(from=1, to=80, by=1)) {
     trees <- c(trees, i)
-    model_rf3 <- randomForest(thalach ~ age + sex + cp + trestbps + chol + restecg + exang + ca, data=train.data, ntree = i)
+    model_rf3 <- randomForest(thalach ~ age + sex + cp + trestbps + chol + restecg + exang + ca, data=train.data2, ntree = i)
     
     pred <- predict(model_rf3, newdata=train.data2, type='response')
     rmse_train <-  RMSE(pred, train.data2$thalach)
@@ -277,7 +277,7 @@ legend('topright',legend = c('training set','testing set'), col = c("red","blue"
 
 set.seed(6522048)
 library(randomForest)
-model_rf4 <- randomForest(thalach ~ age + sex + cp + trestbps + chol + restecg + exang + ca, data=train.data, ntree = 20)
+model_rf4 <- randomForest(thalach ~ age + sex + cp + trestbps + chol + restecg + exang + ca, data=train.data2, ntree = 20)
 
 
 # Root mean squared error
