@@ -63,7 +63,7 @@ The logistic regression and random forest classification results should not be c
 ## Repository Files
 - [`heart_disease_code.r`](heart_disease_analysis.r) - R code used for data preparation, visualization, regression modeling, diagnostics, predictions, and model comparison
 - [`heart_disease_report.pdf`](heart_disease_report.pdf) - Technical summary report containing the analysis, results, visualizations, interpretations, and limitations
-- [`heart_disease_notebook.html`](heart_disease_notebook.html) - HTML notebook preserving the complete code and original outputs
+- [`heart_disease_notebook.html`](heart_disease_notebook.html) = [`heart_disease_notebook.pdf`](heart_disease_notebook.pdf)- HTML notebook and its associated PDF preserving the complete code and original outputs
 
 ## Tools
 
